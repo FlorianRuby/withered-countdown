@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Album Countdown</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="withered-title.png" alt="Withered" class="title-image">
+
+      <div class="countdown">
+        <div>
+          <span id="days">00</span>
+          <span class="label">Days</span>
+        </div>
+        <div>
+          <span id="hours">00</span>
+          <span class="label">Hours</span>
+        </div>
+        <div>
+          <span id="minutes">00</span>
+          <span class="label">Minutes</span>
+        </div>
+        <div>
+          <span id="seconds">00</span>
+          <span class="label">Seconds</span>
+        </div>
+      </div>
+
+      <div class="total-time">
+        <p>
+          Total Remaining: <span id="total-hours">0</span> hours /
+          <span id="total-minutes">0</span> minutes /
+          <span id="total-seconds">0</span> seconds
+        </p>
+      </div>
+
+      <div class="progress-section">
+        <h2>Progress Since Announcement</h2>
+        <div class="progress-container">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+      </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

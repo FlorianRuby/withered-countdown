@@ -1,0 +1,140 @@
+/* Basic Reset & Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif;
+    background-image: url("d4vd.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .container {
+    padding: 40px 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Countdown Timer Styling */
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between time units */
+    margin-bottom: 60px;  /* Increased space below countdown */
+  }
+  
+  .countdown div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .countdown span:not(.label) {
+    font-size: 4em; /* Large numbers */
+    font-weight: bold;
+    line-height: 1;
+    min-width: 100px; /* Ensure consistent width */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+                 0 0 20px rgba(255, 255, 255, 0.5),
+                 0 0 30px rgba(255, 255, 255, 0.3);
+  }
+  
+  .countdown .label {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    color: #ccc;
+    text-shadow: 0 0 5px rgba(204, 204, 204, 0.5),
+                 0 0 10px rgba(204, 204, 204, 0.3);
+  }
+  
+  /* Total Time Remaining Styling */
+  .total-time {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #eee;
+    text-shadow: 0 0 8px rgba(238, 238, 238, 0.6),
+                 0 0 15px rgba(238, 238, 238, 0.4);
+  }
+  
+  .total-time span {
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6),
+                 0 0 15px rgba(255, 255, 255, 0.4);
+  }
+  
+  /* Progress Bar Styling */
+  .progress-section h2 {
+    font-size: 1.6em;  /* Increased from 1.2em */
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #eee;
+    text-shadow: 0 0 8px rgba(238, 238, 238, 0.6),
+                 0 0 15px rgba(238, 238, 238, 0.4);
+  }
+  
+  .progress-container {
+    width: 80%;
+    max-width: 500px;
+    height: 20px;
+    background-color: #555; /* Darker background for the track */
+    border-radius: 10px;
+    overflow: visible; /* Changed from hidden to let the glow show outside */
+    margin: 0 auto 30px auto; /* Center the progress bar */
+    position: relative;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    width: 0%; /* Starts at 0, JS will update this */
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+    filter: drop-shadow(0 0 8px rgba(238, 238, 238, 0.6))
+           drop-shadow(0 0 15px rgba(238, 238, 238, 0.4))
+  }
+  
+  /* Responsive adjustments (optional) */
+  @media (max-width: 600px) {
+    .container {
+      padding: 30px 20px;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    .countdown span:not(.label) {
+      font-size: 2.5em;
+      min-width: 60px;
+    }
+    .countdown {
+      gap: 15px;
+    }
+    .total-time {
+      font-size: 1em;
+    }
+    .progress-container {
+      width: 95%;
+    }
+
+  }
+
+  .title-image {
+    max-width: 50%;
+    height: auto;
+    margin: 400px auto 10px auto; 
+  }
